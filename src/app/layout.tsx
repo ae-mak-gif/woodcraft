@@ -10,7 +10,7 @@ const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans", weight: ["40
 export const metadata: Metadata = {
   title: { default: "WoodCraft — Furniture shaped by nature", template: "%s | WoodCraft" },
   description: "Considered wooden furniture, made with intention. Explore WoodCraft collections or begin a bespoke commission.",
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://woodcraft.example"),
+  metadataBase: process.env.NEXT_PUBLIC_SITE_URL ? new URL(process.env.NEXT_PUBLIC_SITE_URL) : undefined,
   openGraph: {
     title: "WoodCraft — A story carved in wood",
     description: "Furniture shaped by nature. Refined by craft. Made to last.",
